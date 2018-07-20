@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>why-kotlin</artifactId>
+        <groupId>why.kotlin</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>why.kotlin</groupId>
-    <artifactId>why-kotlin</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>coffee-vending-machine-kotlin</module>
-        <module>coffee-vending-machine-java</module>
-        <module>more-examples</module>
-    </modules>
-    <packaging>pom</packaging>
+    <artifactId>coffee-vending-machine-kotlin</artifactId>
+    <packaging>jar</packaging>
 
-    <name>why.kotlin why-kotlin</name>
+    <name>why.kotlin coffee-vending-machine-kotlin</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
