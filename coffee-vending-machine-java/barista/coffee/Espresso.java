@@ -11,7 +11,6 @@ public class Espresso extends Beverage {
     public Milk milk;
     public Sugar sugar;
     public FlavoredSyrup syrup;
-    public CocoaPowder powder;
 
     @Override
     public String getDescription() {
@@ -19,7 +18,11 @@ public class Espresso extends Beverage {
     }
 
     public Float cost() {
-        return 3.50F;
+        Float total = 3.50F;
+        if(milk != null) total += milk.cost();
+        if(sugar != null) total += sugar.cost();
+        if(syrup != null) total += syrup.cost();
+        return total;
     }
 
     private Espresso() {
@@ -30,27 +33,21 @@ public class Espresso extends Beverage {
         public Milk milk;
         public Sugar sugar;
         public FlavoredSyrup syrup;
-        public CocoaPowder powder;
 
         public Builder() {}
 
-        public Builder milk(Milk milk){
-            this.milk = milk;
+        public Builder milk(){
+            this.milk = new Milk();
             return this;
         }
 
-        public Builder sugar(Sugar sugar){
-            this.sugar = sugar;
+        public Builder sugar(){
+            this.sugar = new Sugar();
             return this;
         }
 
-        public Builder syrup(FlavoredSyrup syrup){
-            this.syrup = syrup;
-            return this;
-        }
-
-        public Builder powder(CocoaPowder powder){
-            this.powder = powder;
+        public Builder syrup(){
+            this.syrup = new FlavoredSyrup();
             return this;
         }
 
@@ -59,7 +56,6 @@ public class Espresso extends Beverage {
             coffee.milk = this.milk;
             coffee.sugar = this.sugar;
             coffee.syrup = this.syrup;
-            coffee.powder = this.powder;
             return coffee;
         }
     }

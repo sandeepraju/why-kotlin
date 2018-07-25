@@ -17,7 +17,11 @@ public class HouseBlend extends Beverage {
     }
 
     public Float cost() {
-        return 3.50F;
+        Float total = 4.50F;
+        if(milk != null) total += milk.cost();
+        if(sugar != null) total += sugar.cost();
+        if(syrup != null) total += syrup.cost();
+        return total;
     }
 
     private HouseBlend() {
@@ -31,18 +35,18 @@ public class HouseBlend extends Beverage {
 
         public Builder() {}
 
-        public Builder milk(Milk milk){
-            this.milk = milk;
+        public Builder milk(){
+            this.milk = new Milk();
             return this;
         }
 
-        public Builder sugar(Sugar sugar){
-            this.sugar = sugar;
+        public Builder sugar(){
+            this.sugar = new Sugar();
             return this;
         }
 
-        public Builder syrup(FlavoredSyrup syrup){
-            this.syrup = syrup;
+        public Builder syrup(){
+            this.syrup = new FlavoredSyrup();
             return this;
         }
 

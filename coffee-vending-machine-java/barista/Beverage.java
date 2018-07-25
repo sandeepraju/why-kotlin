@@ -1,7 +1,7 @@
 package barista;
 
 public abstract class Beverage {
-    String description = "Beverage!";
+    private String description = "Beverage!";
 
     public String getDescription() {
         return description;
