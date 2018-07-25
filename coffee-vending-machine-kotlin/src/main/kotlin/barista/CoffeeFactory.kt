@@ -17,4 +17,9 @@ object CoffeeFactory {
                     sugar = hasSugar?.let { Sugar() })
         }
     }
+
+    fun getNewCoffee(type: CoffeeType = CoffeeType.ESPRESSO, milk: Milk? = null, syrup: FlavoredSyrup? = null, sugar: Sugar? = null): Beverage {
+        TODO()
+    }
+
 }
