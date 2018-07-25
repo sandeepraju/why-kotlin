@@ -5,7 +5,7 @@ import barista.condiments.FlavoredSyrup
 import barista.condiments.Milk
 import barista.condiments.Sugar
 
-class HouseBlend(private val milk: Milk? = null, private val sugar: Sugar? = null, private val syrup: FlavoredSyrup? = null) : Beverage() {
+data class HouseBlend(private val milk: Milk? = null, private val sugar: Sugar? = null, private val syrup: FlavoredSyrup? = null) : Beverage() {
     override val description: String = "HouseBlend"
 
     override fun cost(): Float {

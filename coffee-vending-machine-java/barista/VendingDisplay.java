@@ -2,8 +2,8 @@ package barista;
 
 import java.util.Scanner;
 
-public class VendingDisplay {
-    private static Scanner scanner = new Scanner(System.in);
+class VendingDisplay {
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         CoffeeVendor vendor = CoffeeVendor.getInstance();
@@ -27,17 +27,17 @@ public class VendingDisplay {
         }
     }
 
-    public static boolean milkNeeded() {
+    private static boolean milkNeeded() {
         System.out.println("Do you want to add milk? (y/n)");
         return "y".equals(scanner.nextLine().trim());
     }
 
-    public static boolean syrupNeeded() {
+    private static boolean syrupNeeded() {
         System.out.println("Do you want to add flavored syrup? (y/n)");
         return "y".equals(scanner.nextLine().trim());
     }
 
-    public static boolean sugarNeeded() {
+    private static boolean sugarNeeded() {
         System.out.println("Do you want to add sugar? (y/n)");
         return "y".equals(scanner.nextLine().trim());
     }

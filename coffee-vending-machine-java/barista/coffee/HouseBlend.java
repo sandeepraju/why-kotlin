@@ -7,9 +7,9 @@ import barista.condiments.Sugar;
 
 public class HouseBlend extends Beverage {
 
-    public Milk milk;
-    public Sugar sugar;
-    public FlavoredSyrup syrup;
+    private Milk milk;
+    private Sugar sugar;
+    private FlavoredSyrup syrup;
 
     @Override
     public String getDescription() {
@@ -29,9 +29,9 @@ public class HouseBlend extends Beverage {
 
     public static class Builder {
 
-        public Milk milk;
-        public Sugar sugar;
-        public FlavoredSyrup syrup;
+        private Milk milk;
+        private Sugar sugar;
+        private FlavoredSyrup syrup;
 
         public Builder() {}
 

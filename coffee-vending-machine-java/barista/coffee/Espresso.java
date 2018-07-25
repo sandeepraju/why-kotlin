@@ -1,20 +1,19 @@
 package barista.coffee;
 
 import barista.Beverage;
-import barista.condiments.CocoaPowder;
 import barista.condiments.FlavoredSyrup;
 import barista.condiments.Milk;
 import barista.condiments.Sugar;
 
 public class Espresso extends Beverage {
 
-    public Milk milk;
-    public Sugar sugar;
-    public FlavoredSyrup syrup;
+    private Milk milk;
+    private Sugar sugar;
+    private FlavoredSyrup syrup;
 
     @Override
     public String getDescription() {
-        return "HouseBlend";
+        return "Espresso";
     }
 
     public Float cost() {
@@ -30,9 +29,9 @@ public class Espresso extends Beverage {
 
     public static class Builder {
 
-        public Milk milk;
-        public Sugar sugar;
-        public FlavoredSyrup syrup;
+        private Milk milk;
+        private Sugar sugar;
+        private FlavoredSyrup syrup;
 
         public Builder() {}
 

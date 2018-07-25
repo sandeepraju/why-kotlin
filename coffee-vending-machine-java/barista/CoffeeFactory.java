@@ -7,7 +7,7 @@ public class CoffeeFactory {
     private CoffeeFactory() {
     }
 
-    private static CoffeeFactory factory;
+    private static volatile CoffeeFactory factory;
 
     public static CoffeeFactory getInstance() {
         if (factory == null) {

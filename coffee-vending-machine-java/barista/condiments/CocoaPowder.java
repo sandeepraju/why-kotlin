@@ -7,6 +7,6 @@ public class CocoaPowder extends Condiment {
 
     @Override
     public String getDescription() {
-        return "Cocoa Poweder!";
+        return "Cocoa Powder!";
     }
 }
