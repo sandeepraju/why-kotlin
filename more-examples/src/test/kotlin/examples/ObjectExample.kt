@@ -1,5 +1,5 @@
 package examples
-
+// Effective java: Item 2: Enforce Singleton property with private constructor
 object Connection {
     private const val instance = "connection object"
     fun getConnection(): String {
