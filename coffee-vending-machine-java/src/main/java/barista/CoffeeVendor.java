@@ -1,6 +1,7 @@
 package barista;
 
 public class CoffeeVendor {
+    //Note : Singelton
     private static volatile CoffeeVendor vendor;
 
     private CoffeeVendor() {

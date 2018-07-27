@@ -27,6 +27,9 @@ class VendingDisplay {
         }
     }
 
+    // TODO: Add quantity choice to show immutable collection
+
+
     private static boolean milkNeeded() {
         System.out.println("Do you want to add milk? (y/n)");
         return "y".equals(scanner.nextLine().trim());

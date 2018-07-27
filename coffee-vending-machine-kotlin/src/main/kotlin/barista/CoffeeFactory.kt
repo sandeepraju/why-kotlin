@@ -8,6 +8,7 @@ import barista.condiments.Sugar
 
 object CoffeeFactory {
     fun getCoffee(coffeeType: CoffeeType, hasMilk: Boolean?, hasSyrup: Boolean?, hasSugar: Boolean?): Beverage {
+        // Note: Compile time checking of all code branches
         return when (coffeeType) {
             CoffeeType.HOUSE_BLEND -> HouseBlend(milk = hasMilk?.let { Milk() },
                     syrup = hasSyrup?.let { FlavoredSyrup() },
@@ -18,8 +19,11 @@ object CoffeeFactory {
         }
     }
 
-    fun getNewCoffee(type: CoffeeType = CoffeeType.ESPRESSO, milk: Milk? = null, syrup: FlavoredSyrup? = null, sugar: Sugar? = null): Beverage {
-        TODO()
+    fun getNewCoffee(type: CoffeeType = CoffeeType.ESPRESSO, milk: Milk? = null, syrup: FlavoredSyrup? = null, sugar: Sugar? = null) {
+        // Note: Compile time checking of all code branches
+        with(type){
+            ESPRESSO -> {}
+        }
     }
 
 }

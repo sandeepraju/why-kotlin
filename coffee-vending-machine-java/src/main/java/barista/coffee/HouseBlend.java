@@ -5,7 +5,10 @@ import barista.condiments.FlavoredSyrup;
 import barista.condiments.Milk;
 import barista.condiments.Sugar;
 
-public class HouseBlend extends Beverage {
+import java.util.Objects;
+
+//Note: final class
+final public class HouseBlend extends Beverage {
 
     private Milk milk;
     private Sugar sugar;
@@ -27,6 +30,7 @@ public class HouseBlend extends Beverage {
     private HouseBlend() {
     }
 
+    // Note: Builder pattern
     public static class Builder {
 
         private Milk milk;
@@ -57,5 +61,20 @@ public class HouseBlend extends Beverage {
             coffee.syrup = this.syrup;
             return coffee;
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof HouseBlend)) return false;
+        HouseBlend that = (HouseBlend) o;
+        return Objects.equals(milk, that.milk) &&
+            Objects.equals(sugar, that.sugar) &&
+            Objects.equals(syrup, that.syrup);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(milk, sugar, syrup);
     }
 }

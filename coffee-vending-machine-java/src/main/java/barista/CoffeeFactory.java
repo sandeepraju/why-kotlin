@@ -21,24 +21,29 @@ public class CoffeeFactory {
     }
 
     public Beverage serverCoffee(CoffeeType type, Boolean hasMilk, Boolean hasSyrup, Boolean hasSugar) {
-        if (type.equals(CoffeeType.ESPRESSO)) {
-            Espresso.Builder builder = new Espresso.Builder();
+        switch (type){
+            case ESPRESSO: {
+                Espresso.Builder builder = new Espresso.Builder();
 
-            if (hasMilk) builder = builder.milk();
-            if (hasSyrup) builder = builder.syrup();
-            if (hasSugar) builder = builder.sugar();
+                if (hasMilk) builder.milk();
+                if (hasSyrup) builder.syrup();
+                if (hasSugar) builder.sugar();
 
-            return builder.build();
-        } else if (type.equals(CoffeeType.HOUSE_BLEND)) {
-            HouseBlend.Builder builder = new HouseBlend.Builder();
+                return builder.build();
+            }
+            case HOUSE_BLEND: {
+                HouseBlend.Builder builder = new HouseBlend.Builder();
 
-            if (hasMilk) builder = builder.milk();
-            if (hasSyrup) builder = builder.syrup();
-            if (hasSugar) builder = builder.sugar();
+                if (hasMilk) builder.milk();
+                if (hasSyrup) builder.syrup();
+                if (hasSugar) builder.sugar();
 
-            return builder.build();
-        } else {
-            throw new IllegalArgumentException("Incorrect choice provided!");
+                return builder.build();
+            }
+            // Note: no compile time checking of branches
+            default: {
+                throw new IllegalArgumentException("Incorrect choice provided!");
+            }
         }
     }
 }
