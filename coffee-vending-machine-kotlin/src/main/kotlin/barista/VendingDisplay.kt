@@ -37,7 +37,7 @@ object VendingDisplay {
                 val choice = CoffeeType.from(reader.readLine().trim())
                 val beverages = vendor.serveCoffee(coffeeType = choice, hasMilk = milkNeeded(), hasSyrup = syrupNeeded(), hasSugar = sugarNeeded(), quantities = quantitiesNeeded(), metrics = logCoffeePreparationTime)
                 // Higher order function
-                println("Serving: ${beverages.first()?.description} Total cost: ${"$"}${beverages.totalCost()}")
+                println("Serving: ${choice.name} Total cost: ${"$"}${beverages.totalCost()}")
                 println("-".repeat(40))
                 Thread.sleep(1000L)
             } catch (e: Exception) {
