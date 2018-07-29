@@ -1,4 +1,4 @@
-package examples
+package why.kotlin
 
 //Effective Java Item 2: Consider a builder when faced with many constructor parameters
 //But Kotlin has “Named constructor parameters with default values”

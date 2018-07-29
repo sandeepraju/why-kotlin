@@ -1,4 +1,4 @@
-package examples
+package why.kotlin
 
 fun String.removeFirstCharacter(): String {
     return this.substring(1)

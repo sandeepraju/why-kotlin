@@ -1,4 +1,4 @@
-package examples
+package why.kotlin
 
 sealed class Animal
 class Dog(val name: String) : Animal()

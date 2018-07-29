@@ -1,4 +1,4 @@
-package examples
+package why.kotlin
 
 import java.lang.Integer.parseInt
 

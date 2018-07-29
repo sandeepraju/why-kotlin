@@ -1,4 +1,4 @@
-package examples
+package why.kotlin
 
 class Address {
     val street: String = "Main st" // read only property
