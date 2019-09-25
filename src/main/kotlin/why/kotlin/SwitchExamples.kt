@@ -1,5 +1,18 @@
 package why.kotlin
 
+// Couple words on nullablility
+var str1: String? = null
+val str2: String? = "Hello Worlds"
+val str: String = "null"
+
+//val len = str2.length
+
+val len = if (str2 != null) str2.length else 0
+
+val len2 = str2?.length
+
+val len3 = str2?.length ?: 0
+
 val n = 2
 val myNumber = when(n) {
     1 -> "One"
