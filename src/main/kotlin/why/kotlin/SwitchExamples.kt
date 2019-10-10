@@ -36,6 +36,7 @@ sealed class ChemicalElement(val atomicWeight: Int)
 class H: ChemicalElement(1)
 class He: ChemicalElement(2)
 class Li: ChemicalElement(3)
+//class Be: ChemicalElement(4)
 
 fun elementName(element: ChemicalElement): String {
     return when(element) {
